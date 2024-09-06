@@ -1,0 +1,11 @@
+colorama
+coverage
+iniconfig
+packaging
+pluggy
+pytest
+pytest-cov
+pytest-mock
+mysql-connector-python
+neo4j
+pytest-mysql

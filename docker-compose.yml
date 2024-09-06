@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  mariadb:
+    image: mariadb:10.6
+    environment:
+      MYSQL_ROOT_PASSWORD: root-pass
+    ports:
+      - "3306:3306"
+    networks:
+      - train_network
+
+  neo4j:
+    image: neo4j:5.9.0
+    environment:
+      NEO4J_AUTH: none
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    networks:
+      - train_network
+
+networks:
+  train_network:
+    driver: bridge
